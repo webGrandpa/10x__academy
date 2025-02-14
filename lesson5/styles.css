@@ -1,0 +1,82 @@
+html{
+    
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #611ECB;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    width: 1000px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+thead {
+    height: 40px;
+
+}
+
+.row-wrap:hover {
+    background-color: #E1CFFF;
+    transition: .2 ease-in-out;
+}
+
+.header-row {
+    background-color: #F5F5F5 ;
+}
+
+.header-row th:first-child {  
+    border-top-left-radius: 10px; 
+}  
+
+.header-row th:last-child {  
+    border-top-right-radius: 10px; 
+}
+
+.row-wrap { 
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.table-row,.check-input,.rating-star {
+    border-top: 1px solid rgba(225, 207, 255, 1);
+}
+
+.star-rating {  
+    direction: rtl;
+    display: inline-block;  
+}  
+
+.star-rating input {  
+    display: none;
+}  
+
+.star-rating label {  
+    font-size: 14px;  
+    color: #c6c0c0;
+    cursor: pointer;  
+}  
+
+.star-rating input:checked ~ label {  
+    color: #6926D7;
+}  
+
+.star-rating label:hover,  
+.star-rating label:hover ~ label,  
+.star-rating input:checked ~ label:hover {  
+    color: #6926D7;
+    transform: scale(1.2);
+}
