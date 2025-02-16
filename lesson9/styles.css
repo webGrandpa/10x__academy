@@ -14,7 +14,7 @@ header{
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
-    min-height: 100vh;
+    min-height: 130vh;
 
     & .bg-text{
         display: flex;
