@@ -15,205 +15,74 @@ body{
     overflow-x: hidden;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 70px 0px;
     flex-direction: column;
 
-}
-
-.main-header{
-    font-family: "Noto Serif Georgian", serif;
-    font-size: 45px;
-    letter-spacing: -1px;
-    
-}
-
-.header-nav ul li{
-    font-family: "Noto Serif Georgian", serif;
-    font-size: 28px;
-    cursor: pointer;
-    color: #659F7C;
-    border-bottom: 3px solid #659F7C;
-    padding: 0px 15px;
-    font-weight: 800;
-}
-
-.header-nav ul li:hover{
-    
-}
-
-
-h2.virus-name{
-    color: #659F7C;
-    font-size: 20px;
-    font-family: "Noto Serif Georgian", serif;
-    position: absolute;
-    top:-320px;
-    left:-29px;
-}
-.timeline{
-    position: relative;
-    top:70px;
-    width:100vw;
-    height:5px;
-    background-color: #d74e12;
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.timeline-item img{
-    transform:translateY(-50%);
-    position: relative;
-    z-index: 1;
-}
-
-.card-wrapper{
-    position: relative;
-    display: flex;
-    font-size: 15px;
-}
-
-.virus-icon-borders{
-    position: absolute;
-    width:44px;
-    height:342px;
-    top:-235px;
-    left:43px;
-    border-left: 1px solid #659F7C;  
-    border-bottom: 1px solid #659F7C;;
-}
-
-.ver-border {
-    width: 0;
-    height: 270px;
-}
-
-.virus-icon-borders:before{
-    content: "";
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    position: absolute;
-    top:-4px;
-    left:-4px;
-    background-color: #659F7C;
-}
-.virus-img {
-    position: absolute;
-    left:88px;
-    top:53px;
-    border:4px solid  #d74e12;
-    border-radius: 50%;
-}
-
-.top-content-wrapper{
-    width:295px;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top:-248px;
-    left:-30px;
-  
-}
-
-.side-content-holder p{
-width:194px;
-color:#616161;
-font-size: 12px;
-margin-top:7px;
-margin-bottom: 1rem;
-}
-
- .side-content-holder{
-    display: flex;
-    flex-direction: column;
-}  
-
-.side-content-holder a{
-    color:#000;
-    font-size: 16px;
-    text-decoration: none;
-}
-
- .timeline-item {  
-    z-index:2;
-   
- } 
-
-
-
-.side-content-holder .year-number{
-    font-size: 36px;
-}
-
-.card-wrapper:nth-child(even), .card-wrapper:nth-child(even) .top-content-wrapper, .card-wrapper:nth-child(even) h2 {
-transform:rotate(180deg) scale(-1,1);
-}
-
-.card-wrapper:nth-child(even) .timeline-item {
-    transform:rotate(180deg);
- }
-
-
-.card-wrapper:nth-child(even) .virus-icon-borders {
-    z-index: -1;
-}
-
-.card-wrapper:nth-child(even) .side-content-holder{
-    justify-content: flex-end;
-}
-
-.card-wrapper:nth-child(even) a{
-    margin-bottom:32px;
-   
-}
-
-.card-wrapper:nth-child(even) h2{
-    color:#d74e12;
-   
-}
-
-.timeline-header{
-    position: absolute;
-    top:30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    & h1 {
+        font-size: 78.32px;
+        color: #000000;
+        line-height: 78.32px;
+        font-weight: 700;
     }
 
-ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+    & nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+
+        & ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+
+            & a {
+                text-decoration: none;
+                font-size: 40px;
+                font-weight: 700;
+                color: #659F7C;
+                cursor: pointer;
+                position: relative;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+
+            & li{
+                list-style: none;
+            }
+        }
+
+    }
 }
 
-nav{
-    min-width: 500px;
-    max-width:530px ;
-    margin-top: 5px;
-}  
-
-li{
-    font-size: 20px;
-    cursor: pointer;
-    color:#659F7C;
-    border-bottom: 3px solid #659F7C;
-    padding: 0px 15px;
+nav a::after {
+    content: '';
+    display: block;
+    height: 8px;
+    background-color: #659F7C;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -4px;
+    width: 160px;
+    transition: top 0.3s ease, background-color 0.3s ease;
 }
 
-li:hover{
-    color:#d74e12;
-    border-bottom: 3px solid #d74e12;
-
+nav a:hover::after {
+    background-color: #659F7C;
 }
 
-.timeline-marks{
- position: fixed;
- flex-direction: column;
- left:30px;
- bottom: 30px;
+nav a:target {
+    color: #D74E12;
+}
+
+nav a:target::after {
+    background-color: #D74E12;
+    top: 100%;
+    height: 4px;
 }
