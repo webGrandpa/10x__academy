@@ -1,0 +1,219 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", serif;
+}
+
+body{
+    height: 100vh;
+    overflow-y: scroll;
+    overscroll-behavior: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.main-header{
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 45px;
+    letter-spacing: -1px;
+    
+}
+
+.header-nav ul li{
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 28px;
+    cursor: pointer;
+    color: #659F7C;
+    border-bottom: 3px solid #659F7C;
+    padding: 0px 15px;
+    font-weight: 800;
+}
+
+.header-nav ul li:hover{
+    
+}
+
+
+h2.virus-name{
+    color: #659F7C;
+    font-size: 20px;
+    font-family: "Noto Serif Georgian", serif;
+    position: absolute;
+    top:-320px;
+    left:-29px;
+}
+.timeline{
+    position: relative;
+    top:70px;
+    width:100vw;
+    height:5px;
+    background-color: #d74e12;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.timeline-item img{
+    transform:translateY(-50%);
+    position: relative;
+    z-index: 1;
+}
+
+.card-wrapper{
+    position: relative;
+    display: flex;
+    font-size: 15px;
+}
+
+.virus-icon-borders{
+    position: absolute;
+    width:44px;
+    height:342px;
+    top:-235px;
+    left:43px;
+    border-left: 1px solid #659F7C;  
+    border-bottom: 1px solid #659F7C;;
+}
+
+.ver-border {
+    width: 0;
+    height: 270px;
+}
+
+.virus-icon-borders:before{
+    content: "";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    background-color: #659F7C;
+}
+.virus-img {
+    position: absolute;
+    left:88px;
+    top:53px;
+    border:4px solid  #d74e12;
+    border-radius: 50%;
+}
+
+.top-content-wrapper{
+    width:295px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:-248px;
+    left:-30px;
+  
+}
+
+.side-content-holder p{
+width:194px;
+color:#616161;
+font-size: 12px;
+margin-top:7px;
+margin-bottom: 1rem;
+}
+
+ .side-content-holder{
+    display: flex;
+    flex-direction: column;
+}  
+
+.side-content-holder a{
+    color:#000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+ .timeline-item {  
+    z-index:2;
+   
+ } 
+
+
+
+.side-content-holder .year-number{
+    font-size: 36px;
+}
+
+.card-wrapper:nth-child(even), .card-wrapper:nth-child(even) .top-content-wrapper, .card-wrapper:nth-child(even) h2 {
+transform:rotate(180deg) scale(-1,1);
+}
+
+.card-wrapper:nth-child(even) .timeline-item {
+    transform:rotate(180deg);
+ }
+
+
+.card-wrapper:nth-child(even) .virus-icon-borders {
+    z-index: -1;
+}
+
+.card-wrapper:nth-child(even) .side-content-holder{
+    justify-content: flex-end;
+}
+
+.card-wrapper:nth-child(even) a{
+    margin-bottom:32px;
+   
+}
+
+.card-wrapper:nth-child(even) h2{
+    color:#d74e12;
+   
+}
+
+.timeline-header{
+    position: absolute;
+    top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav{
+    min-width: 500px;
+    max-width:530px ;
+    margin-top: 5px;
+}  
+
+li{
+    font-size: 20px;
+    cursor: pointer;
+    color:#659F7C;
+    border-bottom: 3px solid #659F7C;
+    padding: 0px 15px;
+}
+
+li:hover{
+    color:#d74e12;
+    border-bottom: 3px solid #d74e12;
+
+}
+
+.timeline-marks{
+ position: fixed;
+ flex-direction: column;
+ left:30px;
+ bottom: 30px;
+}
