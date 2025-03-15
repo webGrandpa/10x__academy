@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Duel</title>
+    <style>
+        button {
+            height: 50px;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .gendalf {
+            background: grey;
+        }
+        .dumbledore {
+            background: blueviolet;
+        }
+        .match {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="gendalf-buttons">
+        <button class="gendalf" onclick="increaseGendalf()">Gendalf +10</button>
+        <button class="gendalf" onclick="decreaseGendalf()">Gendalf -5</button>
+    </div>
+
+    <div class="dumbledore-buttons">
+        <button class="dumbledore" onclick="increaseDumbledore()">Dumbledore +10</button>
+        <button class="dumbledore" onclick="decreaseDumbledore()">Dumbledore -5</button>
+    </div>
+
+    <button class="match" onclick="matchResult()">Match</button>
+
+    <script>
+       let gendalfMagicPower = 100;
+       let dumbledoreMagicPower = 120;
+
+       function increaseGendalf(){
+           gendalfMagicPower += 10;
+           console.log(`Gendalf's power increased to: ${gendalfMagicPower}`);
+       }
+
+       function decreaseGendalf(){
+           gendalfMagicPower -= 5;
+           console.log(`Gendalf's power decreased to: ${gendalfMagicPower}`);
+       }
+
+       function increaseDumbledore(){
+           dumbledoreMagicPower += 10;
+           console.log(`Dumbledore's power increased to: ${dumbledoreMagicPower}`);
+       }
+
+       function decreaseDumbledore(){
+           dumbledoreMagicPower -= 5;
+           console.log(`Dumbledore's power decreased to: ${dumbledoreMagicPower}`);
+       }
+
+       function matchResult(){
+           if(gendalfMagicPower > dumbledoreMagicPower){
+               console.log(`Gendalf Won! His magic power is: ${gendalfMagicPower}`);
+           }else if(gendalfMagicPower < dumbledoreMagicPower){
+               console.log(`Dumbledore Won! His magic power is: ${dumbledoreMagicPower}`);
+           }else{
+               console.log("TIE! Their magic power is equal.");
+           }
+       }
+    </script>
+</body>
+</html>
+
+
