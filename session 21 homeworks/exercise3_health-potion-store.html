@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #e7e6e6;
+            
+        }
+
+        button{
+            height: 50px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: tomato;
+            margin: 0 20px;
+        }
+
+        button:hover{
+            transform: scale(1.01);
+        }
+
+        button:active{
+            transform: scale(0.99);
+        }
+
+        .button-box{
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #ffffff32;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .health{
+            background: rgb(146, 225, 146);
+        }
+
+        .health:hover{
+            background: rgba(146, 225, 146, 0.646);
+        }
+
+        .mana{
+            background: #3593d2;
+        }
+
+        .mana:hover{
+            background: #3593d2af;
+        }
+
+        .total{
+            background: goldenrod;
+        }
+
+        .total:hover{
+            background: rgba(218, 165, 32, 0.671);
+        }
+
+        h1{
+            font-size: 50px;
+            padding: 50px;
+            color: rgb(63, 68, 69);
+        }
+
+        .potion-img{
+            display: flex;
+            align-items: center;
+
+            &> img{
+                width: 200px;
+            }
+        }
+
+    </style>
+
+    <h1>Potion Market</h1>
+
+    <div class="button-box">
+        <button class="health" onclick="calcPotion()">Health Potion</button>
+        <button class="mana" onclick="calcMana()">Mana Potion</button>
+        <button class="total" onclick="priceOfPotions()">Total Price</button>
+    </div>
+
+    <div class="potion-img">
+        <img src="./assets/health_potion.png" alt="Health Potion Img">
+        <img src="./assets/mana_potion.png" alt="Mana Potion Img">
+        <img src="./assets/Gold_coins_bag.png" alt="Gold Coin Bag">
+    </div>
+
+
+
+    <script>
+        let healhtPotion = 0;
+        let manaPotion = 0;
+        let healthPrice = 15;
+        let manaPrice = 9;
+        let discount = 0.1;
+        let totalPrice = 0; 
+
+        function calcPotion(){
+            healhtPotion+= 1;
+        console.log(`Health Price ${healthPrice} Gold - Quantity: ${healhtPotion}`);
+        totalPrice = (healhtPotion * healthPrice) + (manaPotion * manaPrice);
+    }
+
+        function calcMana(){
+            manaPotion+= 1;
+        console.log(`mana Price ${manaPrice} Gold - Quantity: ${manaPotion}`);
+        totalPrice = (healhtPotion * healthPrice) + (manaPotion * manaPrice);
+    }
+
+    function priceOfPotions(){
+        
+        if (totalPrice >= 50){
+            console.log(`For big amount of potions you have a discount: ${totalPrice - (totalPrice * discount)} Discount was: ${totalPrice * discount}`);
+        } else {
+            console.log(`Your price is: ${totalPrice}`);
+        }
+        
+        healhtPotion = 0;
+        manaPotion = 0;
+        healthPrice = 15;
+        manaPrice = 9;
+        totalPrice = 0; 
+    }
+
+    </script>
+
+</body>
+</html>

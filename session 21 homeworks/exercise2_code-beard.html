@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+    <button onclick="randomTreasure()">Treasure</button>
+    
+    <script>
+
+        let goldenCoins = 100;
+        let treasureMap = 'an old map with an X marked on it';
+        let cursedAmulet = true;
+
+        console.log(` Type of goldenCoins: ${typeof goldenCoins}\n type of Old Map: ${typeof treasureMap}\n type of Cursed Amulet: ${typeof cursedAmulet}`);
+
+        function randomTreasure(){
+       
+
+            const treasure = (Math.random());
+
+    let treasureType = '';
+            
+        if(treasure >= 0 && treasure < 1 / 3 ){
+            treasureType = 'Golden Coins';
+        } else if (treasure >= 1 / 3 && treasure < 2 / 3){
+            treasureType = 'Old Map with mark';
+        } else if (treasure >= 2 / 3 && treasure < 1){
+            treasureType = 'Cursed amulet';
+        }
+
+
+
+        if(treasureType === 'Golden Coins'){
+            document.body.style = `
+            background-image: url(./assets/Golden_coins.jpeg);
+            background-repeat: no-repeat;
+            `;
+        } else if(treasureType === 'Old Map with mark'){
+            document.body.style = `
+            background-image: url(./assets/treasure_map.jpeg);
+            background-repeat: no-repeat;
+            `;
+        } else if(treasureType === 'Cursed amulet'){
+            document.body.style = `
+            background-image: url(./assets/Cursed_amulet.jpeg);
+            background-repeat: no-repeat;
+            `;
+            
+        }
+
+        console.log(`You got a ${treasureType}`);
+
+    }
+    
+
+
+
+    </script>
+
+</body>
+</html>
