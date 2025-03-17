@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Earnings</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bakery-buttons {
+            width: 600px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #9ddfec;
+            gap: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.76);
+        }
+        .bakery-buttons > button {
+            width: 120px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: #ece99d;
+            padding: 5px 0;
+        }
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        button:active {
+            transform: scale(0.99);
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 10px;
+            background: #f3f3f3;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+        .img-holder{
+            position: relative;
+        }
+        img{
+            position: absolute;
+            z-index: -1;
+            top: -132px;
+            left: -500px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>The Bakery's Daily Earnings</h1>
+    <div class="img-holder"><img src="./assets/bakery_daily_earning.jpg" alt=""></div>
+    <div class="bakery-buttons">
+        <button class="bread" onclick="dailyBreadCalc()">Bread</button>
+        <button class="cake" onclick="dailyCakeCalc()">Cake</button>
+        <button class="daily-earning" onclick="totalDailyEarning()">Daily Earning</button>
+        <button class="reset" onclick="resetData()">Reset</button>
+    </div>
+
+    <div id="output">Accounting</div>
+
+    <script>
+        const bread = 10;
+        const cake = 15;
+        let dailySoldBread = 0;
+        let dailySoldCake = 0;
+        let dailyEarning = 0;
+
+        function dailyBreadCalc() {
+            dailySoldBread++;
+            updateOutput();
+        }
+
+        function dailyCakeCalc() {
+            dailySoldCake++;
+            updateOutput();
+        }
+
+        function totalDailyEarning() {
+            dailyEarning = (bread * dailySoldBread) + (cake * dailySoldCake);
+            updateOutput();
+        }
+
+        function resetData() {
+            dailySoldBread = 0;
+            dailySoldCake = 0;
+            dailyEarning = 0;
+            updateOutput();
+        }
+
+        function updateOutput() {
+            document.getElementById("output").innerHTML = `
+                <p>Bread Sold: ${dailySoldBread} x ${bread} Gold</p>
+                <p>Cake Sold: ${dailySoldCake} x ${cake} Gold</p>
+                <p><strong>Total Daily Earnings: ${dailyEarning} Gold</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
