@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="message"></p>
+    <script>
+  
+let hasTreasureMap = true;  
+let foundAncientKey = false; 
+let solvedRiddleScroll = true; 
+let hasCompass = true; 
+let isFullMoon = false;
+let canFindTreasure = hasTreasureMap && (foundAncientKey || (solvedRiddleScroll && hasCompass));
+let result = '';
+
+
+if (canFindTreasure) {
+    result = "Success! Alex can find the legendary treasure!";
+} else {
+    result = "Alas, Alex is missing crucial clues and cannot find the treasure yet.";
+}
+
+document.getElementById("message").innerHTML = result;
+    </script>
+</body>
+</html>

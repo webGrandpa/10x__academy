@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Showdown</title>
+</head>
+<body>
+
+    <h1>Superhero Showdown</h1>
+    <p id="result"></p> 
+
+    <script>
+        let heroStrength = 95;
+        let villainStrength = 90;
+        let strengthDifference = Math.abs(heroStrength - villainStrength);
+        let message = "";
+
+        if (heroStrength > villainStrength && strengthDifference > 10) {
+            message = "Valiant triumphs decisively! Malakor is utterly outmatched!";
+        } else if (villainStrength > heroStrength && strengthDifference > 10) {
+            message = "Malakor's power is overwhelming! Valiant is soundly defeated!";
+        } else if (heroStrength === villainStrength) {
+            message = "It's a strength stalemate! Neither Valiant nor Malakor can overpower the other.";
+        } else if (heroStrength > villainStrength) {
+            message = "Valiant barely edges out! A close call victory against Malakor!";
+        } else {
+            message = "Malakor narrowly prevails! A hard-fought win over Valiant!";
+        }
+
+        document.getElementById("result").innerHTML = message;
+    </script>
+
+</body>
+</html>

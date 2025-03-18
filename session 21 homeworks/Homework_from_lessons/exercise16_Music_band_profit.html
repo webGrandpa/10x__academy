@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="result"></h1>
+    <script>
+
+
+const ticketPrice = 20;
+let ticketSold = 500;
+let concertCosts = 8000;
+const totalEarning = ticketPrice * ticketSold;
+const concertProfit = totalEarning - concertCosts;
+let message = '';
+
+if(totalEarning < concertProfit){
+    message = (`concert did not cover costs...\n Earning: ${totalEarning},\n Costs: ${concertCosts}`);
+} else if (totalEarning > concertProfit){
+    message = (`concert have a profit: ${concertProfit}...\n Earning: ${totalEarning},\n Costs: ${concertCosts}`);
+} else {
+    message = (`concert profit/Loss is equal...\n Earning: ${totalEarning},\n Costs: ${concertCosts}`);
+}
+
+document.getElementById("result").innerHTML = message;
+
+    </script>
+</body>
+</html>

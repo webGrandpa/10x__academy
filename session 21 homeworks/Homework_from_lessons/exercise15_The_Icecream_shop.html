@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+const conePrice = 4.00;
+const sundaePrice = 8.00;
+
+
+let conesSoldToday = 250;
+let sundaesSoldToday = 120;
+
+
+let coneEarnings = conePrice * conesSoldToday;
+let sundaeEarnings = sundaePrice * sundaesSoldToday;
+let totalEarningsBeforeDiscount = coneEarnings + sundaeEarnings;
+
+
+let discountApplied = 0;
+let finalTotalEarnings = totalEarningsBeforeDiscount;
+
+if (totalEarningsBeforeDiscount >= 1000) {
+    discountApplied = totalEarningsBeforeDiscount * 0.05;
+    finalTotalEarnings = totalEarningsBeforeDiscount * 0.95;
+}
+
+
+console.log(`Total earnings before discount: $${totalEarningsBeforeDiscount.toFixed(2)}`);
+console.log(`Discount applied: $${discountApplied.toFixed(2)}`);
+console.log(`Final total daily earnings: $${finalTotalEarnings.toFixed(2)}`);
+console.log(`Volume Discount Applied: ${discountApplied > 0 ? "Yes" : "No"}`);
+    </script>
+</body>
+</html>
