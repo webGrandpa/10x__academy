@@ -147,4 +147,7 @@ function magicMirror(message, transformFunction) {
     return `The mirror says: ${transformedMessage}`;
 }
 
+
 console.log(magicMirror("Will I be rich?", editText));
+
+

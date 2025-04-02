@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+
+    <script>
+        let burgerManPower = 100;
+        let pizzaDudePower = 110;
+
+        burgerManPower += 5;
+        pizzaDudePower -= 5;
+
+        let message = '';
+
+        if(burgerManPower > pizzaDudePower){
+            message = (`Burger Man WINS... his power is ${burgerManPower}`);
+        } else if(pizzaDudePower > burgerManPower){
+            message = (`Pizza Dude WINS... his power is ${pizzaDudePower}`);
+        } else {
+            message = (`Their power is equal... T_I_E!`)
+        }
+
+        document.getElementById('result').innerHTML = message;
+    </script>
+</body>
+</html>
