@@ -1,0 +1,117 @@
+@mixin display_properties($flex, $align, $justify, $direction){
+    display: $flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: contain;
+}
+
+main{
+    @include display_properties(flex, center, center, row);
+    position: relative;
+
+    article{
+        @include display_properties(flex, flex-start, center, column);
+        margin-top: 250px;
+        margin-left: -230px;
+        gap: 20px;
+
+        h1{
+            color: #fff;
+            font-size: 72px;
+            letter-spacing: 7px;
+        }
+
+        p{
+            width: 60%;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        button{
+            width: 11rem;
+            height: 60px;
+            border-radius: 29px;
+            font-size: 18px;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.01);
+                background: #e2be19;
+            }
+
+            &:active{
+                transform: scale(0.99);
+                background: #f4d757ce;
+            }
+        }
+
+    }
+    
+    figure{
+        position: absolute;
+        top: 0;
+        left:600px;
+
+        > :nth-child(1){
+         position: absolute;
+         top: 30px;  
+         left: -600px;
+         z-index: -1; 
+         opacity: 0.8;
+        }
+
+        > :nth-child(2){
+            position: absolute;
+            z-index: -1;
+        }
+
+        > :nth-child(3){
+            @include display_properties(flex, center, center, column);
+            width: 12rem;
+            color: #fff;
+            position: absolute;
+            left: 580px;
+            top: 100px;
+
+            >:nth-child(1){
+                font-size: 50px;
+                font-weight: 800;
+            }
+
+            >:nth-child(2){
+                letter-spacing: 2px;
+            }
+        }
+
+        > :nth-child(4){
+            @include display_properties(flex, center, center, column);
+            width: 12rem;
+            color: #fff;
+            position: absolute;
+            left: 210px;
+            bottom: -570px;
+
+            >:nth-child(1){
+                font-size: 50px;
+                font-weight: 800;
+            }
+
+            >:nth-child(2){
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
