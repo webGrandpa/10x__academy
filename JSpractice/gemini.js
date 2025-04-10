@@ -535,8 +535,8 @@ function calculateSum(num1, num2){
     return num1 + num2;
 }
 
-let sumNums = calculateSum(3, 4);
-console.log(sumNums);
+let totalSums = calculateSum(3, 4);
+console.log(totalSums);
 
 //3. Basic Arrow Function:
 
@@ -678,3 +678,61 @@ function isPasswordValid(password){
         }
     }
 }
+
+console.log(isPasswordValid('paroliaigi'))
+
+//14. Count Character Occurrences:
+
+function countChar(text, charToCount){
+    let occurrances = 0;
+    for(let i = 0; i < text.length; i++){
+        if(text[i] === charToCount){
+            occurrances++;
+        }
+    }
+    return occurrances;
+}
+
+console.log(countChar('hello World', 'l'));
+
+//explain me what is text[i], i dont understand it
+
+//15. Sum of Evens in Range:
+
+function sumEvenNumbersInRange(start, end){
+    let sum = 0;   
+    for(let i = start; i <= end; i++){
+
+        if(i % 2 === 0){
+            sum += i;
+        }
+    }
+    return sum;
+}
+console.log(sumEvenNumbersInRange(1,10));
+
+//EXERCISE LVL GOD:
+
+//16.Comprehensive Number Range Analyzer:
+
+function analyzeNumberRange(startNum, endNum){
+    let totalSum = 0
+    if(startNum >= endNum){
+        console.log("Start number must be less than or equal to end number.")
+        return null;
+    } else {
+        for(let i = startNum; i <= endNum; i++){
+            if(i % 2 === 0){
+                totalSum += i;
+                console.log(`${i} is even`);
+            } else {
+                totalSum += i;
+                console.log(`${i} is odd`);
+            }
+        }
+    }
+    return totalSum;
+}
+
+console.log(analyzeNumberRange(3, 7));
+
