@@ -86,7 +86,11 @@ function Fraction(){
 
 const separateStudents = (name) =>`${name} is in ${Fraction()}`;
 
-console.log(separateStudents("Harry Potter", Fraction));
+// function separateStudentBy(name1){
+//     return `${name1} is in ${Fraction()}`;
+// }
+
+separateStudents("Harry Potter");
 
 
 // რენდომაიზერში მასივის შემოტანითაც შეიძლება გაკეთდეს

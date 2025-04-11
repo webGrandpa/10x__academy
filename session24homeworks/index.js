@@ -80,6 +80,7 @@ function calculate(a, b, operator){
     }
 }
 console.log(calculate(9, 4, '%'));
+console.log(calculate(93928, 394829, '*'))
 // switch is added to inventar :D
 // ეს დავალებები უფრო მომწონს ვიდრე წინები :D
 
