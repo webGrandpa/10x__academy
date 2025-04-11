@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 82px;
+  text-decoration: none;
+  list-style: none;
+}
+header .header_logo_wrapper {
+  color: #2947A9;
+  text-decoration: none;
+  list-style: none;
+}
+header .header_logo_wrapper span {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+ul a {
+  text-decoration: none;
+}
+ul a li {
+  list-style: none;
+  color: #14171F;
+}/*# sourceMappingURL=styles.css.map */
