@@ -122,9 +122,15 @@ main .reputation > h2 {
   padding: 50px 0 150px 80px;
 }
 .about-us > article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   position: absolute;
   width: 30%;
   height: 700px;
   background: #2947a9;
   right: 200px;
+  padding: 30px;
+  gap: 30px;
 }/*# sourceMappingURL=styles.css.map */

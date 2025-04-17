@@ -149,10 +149,14 @@
     }
 
     >article{
+      @include displayProperties(flex, flex-start, flex-start);
+      flex-direction: column;
       position: absolute;
       width: 30%;
       height: 700px;
       background: $blue;
       right: 200px;
+      padding: 30px;
+      gap: 30px;
     }
   }
