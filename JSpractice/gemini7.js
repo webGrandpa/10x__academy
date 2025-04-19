@@ -502,62 +502,213 @@
 
 //4. Find First Even Number: 
 
-const numbers = [1, 3, 5, 8, 9, 10, 13];
+// const numbers = [1, 3, 5, 8, 9, 10, 13];
 
-let found = false;
+// let found = false;
 
-for (let i = 0; i < numbers.length; i++){
-    if (numbers[i] % 2 === 0){
-        console.log(numbers[i]);
-        found = true;
-        break;
+// for (let i = 0; i < numbers.length; i++){
+//     if (numbers[i] % 2 === 0){
+//         console.log(numbers[i]);
+//         found = true;
+//         break;
+//     }
+// }
+// if (!found){
+//     console.log("No even numbers found");
+// }
+
+// //5. Combine and Check
+
+// let arr1 = [1, 2, 3];
+
+// let arr2 = [4, 5, 6];
+
+// let combined = [];
+
+// for (let i = 0; i < arr1.length; i++){
+//     combined.push(arr1[i]);
+// }
+// for (let i = 0; i < arr2.length; i++){
+//     combined.push(arr2[i]);
+// }
+
+// console.log(combined.includes(3), combined);
+
+// //LVL GOD:
+
+// //1. Inventory Management:
+
+// let inventory = ["Apples", "Oranges", "Apples", "Bananas", "Apples", "Milk"];
+
+// let itemsToRemove = ["Apples", "Milk"];
+
+// let updatedInventory = [];
+
+// let removedCount = 0;
+
+// for (let i = 0; i < inventory.length; i++){
+//     if (!itemsToRemove.includes(inventory[i])){
+//         updatedInventory.push(inventory[i]);
+//     } else {
+//         removedCount++;
+//     }
+// }
+
+// console.log(`Original Inventory: ${inventory}\n
+//              Items to Remove: ${itemsToRemove}\n
+//              Updated Inventory: ${updatedInventory}\n
+//              Total items removed: ${removedCount}`);
+
+
+// ===========LESSON 8=================
+//============Objects==================
+
+let car = {
+    make: "toyota",
+    model: "Camry",
+    year: 2022
+};
+
+console.log(car.make);
+console.log(car.year);
+
+
+let user = {
+    username: "gemini_learner",
+    "user id": 12345,
+    isActive: true
+  };
+
+console.log(user['username']);
+console.log(user["user id"]);
+
+let acces = 'isActive';
+
+console.log(user[acces]);
+
+let dynamicKey = 'user' + ' ' + 'id';
+
+console.log(user[dynamicKey]);
+
+
+let book = {
+    title: "Learning JavaScript",
+    author: "Dev Person",
+    pages: 300
+};
+
+console.log("Original pages:", book.pages);
+console.log(`Original Pages: ${book.pages}`);
+
+book.pages = 350;
+
+console.log(book.pages);
+
+book['title'] = "mastering JavaScript";
+
+console.log(book['title']);
+console.log(book.title);
+
+let computer = {
+    brand: "TechCo",
+    ramGB: 16
+};
+
+console.log("Before aDDing:", computer);
+
+computer.cpu = "Ultrafast v3";
+
+console.log(computer);
+
+computer["storageType"] = "SSD";
+computer["storage space"] = "1TB";
+
+console.log("After adding:", computer);
+
+let gadget = {
+    name: "SmartWatch",
+    version: 2.0,
+    hasGPS: true
+  };
+
+  console.log("Before delete:", gadget);
+  console.log(`Before delete: ${gadget}`);
+
+delete gadget.version;
+
+console.log("After delete:", gadget);
+
+delete gadget.color;
+
+console.log("color is not a key", gadget);
+
+let rectangle = {
+    width: 10,
+    height: 5,
+    calculateArea: function() {
+        return rectangle.width * rectangle.height;
     }
-}
-if (!found){
-    console.log("No even numbers found");
-}
+};
 
-//5. Combine and Check
+console.log(rectangle);
+console.log(rectangle.calculateArea());
 
-let arr1 = [1, 2, 3];
-
-let arr2 = [4, 5, 6];
-
-let combined = [];
-
-for (let i = 0; i < arr1.length; i++){
-    combined.push(arr1[i]);
-}
-for (let i = 0; i < arr2.length; i++){
-    combined.push(arr2[i]);
-}
-
-console.log(combined.includes(3), combined);
-
-//LVL GOD:
-
-//1. Inventory Management:
-
-let inventory = ["Apples", "Oranges", "Apples", "Bananas", "Apples", "Milk"];
-
-let itemsToRemove = ["Apples", "Milk"];
-
-let updatedInventory = [];
-
-let removedCount = 0;
-
-for (let i = 0; i < inventory.length; i++){
-    if (!itemsToRemove.includes(inventory[i])){
-        updatedInventory.push(inventory[i]);
-    } else {
-        removedCount++;
+let circle = {
+    radius: 7,
+    calculateCircum() {return 2 * 3.14159 * this.radius
     }
-}
+};
 
-console.log(`Original Inventory: ${inventory}\n
-             Items to Remove: ${itemsToRemove}\n
-             Updated Inventory: ${updatedInventory}\n
-             Total items removed: ${removedCount}`);
+console.log(circle);
+console.log(circle.calculateCircum());
+
+let person = {
+    firstName: "Giorgi",
+    lastName: "Khiladze",
+    age: 31,
+    getFullName(){
+        return this.firstName + " " +this.lastName;
+    },
+    canDrive(){
+        return this.age >= 18;
+    },
+
+    introduce(){
+        console.log("Hello, my name is " + this.getFullName() + ".");
+        if (this.canDrive()){
+            console.log("I'm old enough to drive.");
+        } else {
+            console.log("I'm not old enough to drive yet.");
+        }
+    }
+};
+
+console.log(person.getFullName());
+console.log(person.canDrive());
+person.introduce();
+
+let anotherPerson = {
+    firstName: "Jane",
+    lastName: "Smith",
+    age: 16,
+    getFullName: person.getFullName,
+    canDrive: person.canDrive,
+    introduce: person.introduce
+};
+
+console.log(anotherPerson.getFullName());
+console.log(anotherPerson.canDrive());
+anotherPerson.introduce();
+
+
+
+
+
+
+
+
+
+
 
 
 
