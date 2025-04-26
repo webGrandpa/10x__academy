@@ -25,7 +25,8 @@ console.log(mapArray);
 
 let randomNum = Math.floor(Math.random() * 11) -5;
 
-let newMapArray = numArray.map(element => element + randomNum)
+let newMapArray = numArray
+    .map(element => element + randomNum)
     .map(function(element){
         if(element % 2 === 0){
             return Math.random();
