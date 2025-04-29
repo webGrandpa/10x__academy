@@ -700,6 +700,42 @@ console.log(anotherPerson.getFullName());
 console.log(anotherPerson.canDrive());
 anotherPerson.introduce();
 
+let blogPost = {
+    title: "Understanding Nested Data",
+    author: {
+        name: "Chris Coder",
+        email: "chris@example.com"
+    },
+    tags: ["JavaScript", "Objects", "Nesting"],
+    Comments: [
+        {username: "Learner1", text: "Great explanation!"},
+        {username: "DevDude", text: "Very helpful, thanks"}
+    ],
+    printAuthorCity(){
+        console.log("Batumi")
+    }
+}
+
+console.log(blogPost.author.name);
+console.log(blogPost.tags[1]);
+console.log(blogPost.Comments[0].username);
+console.log(blogPost["author"]["email"]);
+console.log(blogPost.Comments[1]["text"]);
+
+blogPost.author.country = "GEORGIA";
+console.log(blogPost.author);
+
+blogPost.Comments.push({username: "Newbie", text: "Just starting"});
+console.log(blogPost.Comments[2]);
+
+
+
+
+
+
+
+
+
 
 
 
