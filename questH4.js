@@ -21,10 +21,10 @@
 //  Updated nodes: A, B
 
 // const registry = [{ name: 'A', status: 'old' }, { name: 'B', status: 'old' }];
-// // const asignObj = registry.Object.asign()
+// const asignObj = registry.Object.asign()
 
-// const upgraded = registry.map(function(element){})
+const upgraded = registry.map(function(element){})
 
-// const namesList = upgraded.map(functio?n(element){element.join(', ')});
+const namesList = upgraded.map(functio?n(element){element.join(', ')});
 
-// console.log(`Updated nodes: ${namesList}`);
+console.log(`Updated nodes: ${namesList}`);

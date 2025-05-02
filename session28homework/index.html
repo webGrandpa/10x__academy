@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case #1: The Hidden Message</title>
+</head>
+<body>
+    <div class="case_1">
+        <h2>Case #1</h2>
+        <p id="hidden-message" style="display: none;"> !egassem terces a si sihT</p>
+        <p>Decoded Message: <span id="decoded-message"></span></p>
+        <button onclick="revealMessage()">Reveal Message</button>
+    </div>
+    <div class="case_2">
+        <h2>Case #2</h2>
+        <div class="classified" data-security="high">Top Secret Document</div>
+        <div class="classified" data-security="medium">Confidential Report</div>
+        <div class="classified" data-security="low">Public Notice</div>
+    </div>
+    <div class="case_3">
+        <h2>Case #3</h2>
+        <div class="suspect" data-clue="red-hat">Suspect 1</div>
+        <div class="suspect" data-clue="blue-scarf">Suspect 2</div>
+        <div class="suspect" data-clue="green-coat">Suspect 3</div>
+    </div>
+
+
+
+    <script>
+        //case 1
+        function revealMessage(){
+        const hiddenMessageElement = document.getElementById('hidden-message');
+        hiddenMessageElement.style.display = 'block';
+        const hiddenMessage = hiddenMessageElement.textContent;
+        const decodedMessage = hiddenMessage.split('').reverse().join('');
+        const decodedMessageElement = document.getElementById('decoded-message');
+        decodedMessageElement.textContent = decodedMessage;
+    };
+        //case 2
+        function securityCase(){
+        const securityClass = document.getElementsByClassName("classified");
+        for (let i = 0; i < securityClass.length; i++){
+            const currentFile = securityClass[i];
+            const securityLevel = currentFile.getAttribute("data-security");
+            if(securityLevel === "high"){
+                currentFile.style.backgroundColor = "red";
+            } else if (securityLevel === "medium"){
+                currentFile.style.backgroundColor = "yellow";
+            } else {
+                currentFile.style.backgroundColor = "green";
+            }
+            currentFile.addEventListener("click", function(){
+                alert("file:" + this.textContent);
+            });
+        }
+    };
+    securityCase();
+
+        //case 3
+
+        function identifyCriminal(){
+            const suspectByTagNames = document.getElementsByTagName("suspect");
+            const evidence = "red-hat";
+            for (let i =  0; i < suspectByTagNames.length; i++){
+                const currentFile = suspectByTagNames[i];
+                const dataClue = currentFile.getAttribute("data-clue");
+                if (dataClue === evidence) {
+                    currentFile.classList.add("prime-suspect");
+                    const identificationMessage = document.createElement("p");
+                    identificationMessage.textContent = "IDENTIFIED";
+                    currentFile.parentNode.insertBefore(identificationMessage, currentFile.nextSibling);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
+
