@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div x-data="{ open: false }">
+        <p>Hello Makhare! <span x-text="open"></span></p>
+
+        <p x-show="open">Test</p>
+        
+        <button x-bind:class="open ? 'inactive' : 'active'"
+        x-on:click="open = !open">
+            <span x-text="open ? 'close' : 'open'"></span>
+        </button>
+    </div>
+    <div x-data="{ open: false }">
+        <div x-data="{ label: 'Content:' }">
+            <span x-text="label"></span>
+            <span x-show="open"></span>
+        </div>
+    </div>
+</body>
+</html>

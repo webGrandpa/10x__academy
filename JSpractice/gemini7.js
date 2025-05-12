@@ -572,7 +572,6 @@ let car = {
 console.log(car.make);
 console.log(car.year);
 
-
 let user = {
     username: "gemini_learner",
     "user id": 12345,
@@ -727,6 +726,80 @@ console.log(blogPost.author);
 
 blogPost.Comments.push({username: "Newbie", text: "Just starting"});
 console.log(blogPost.Comments[2]);
+
+
+// 1 - c
+// 2 - c
+// 3 - a
+// 4 - c
+// 5 - d
+// 6 - c
+// 7 - c
+// 8 - b
+// 9 - b
+//10 - b
+//11 - b
+//12 - d
+//13 - c
+//14 - b
+//15 - d
+//16 - t
+//17 - t
+//18 - t
+//19 - f
+//20 - f
+//21 - t
+//22 - f
+//23 - t
+//24 - t
+//25 - t
+//26 - f
+//27 - f
+//28 - 26
+//29 - 12
+//30 - undefined
+//31 - hi leo
+//32 - 5
+//33 - sam
+//34 - quotes
+//35 - itself
+//36 - i dont know
+//37 - object
+
+
+//1 Create Object: 
+
+let movie = {
+    title: "string",
+    director: "string",
+    releeaseYear: 2025
+};
+
+console.log(movie);
+
+//2 Access Properties:
+
+console.log(movie.title, movie["releeaseYear"]);
+
+//3 Modify Property:
+
+movie.director = "another string";
+console.log(movie.director);
+//4 Add Property: 
+movie.rating = 8.5;
+
+console.log(movie);
+// 5 Delete Property:
+movie.country = "USA"
+console.log(movie);
+
+delete movie.country
+console.log(movie);
+
+
+
+
+
 
 
 
