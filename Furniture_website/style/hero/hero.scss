@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Noto+Serif+Georgian:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..900;1,100..900&family=Shadows+Into+Light&family=Tiny5&display=swap');
+
+$main-font: "Roboto Mono", monospace;
+$main-bg: #fff;
+$primary-orange: #FFB128;
+$dark-blue: #0B3954;
+$darker-blue: #2A2B39;
+$grey-font: #5C676D;
+
+$mobile-menu-width: 250px;
+$breakpoint-tablet: 768px;
+
+@mixin display_prop($flex, $content, $align){
+    display: $flex;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin font_prop($family, $size, $weight, $color){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+.btn-style{
+    padding: 10px 20px;
+    border-radius: 45px;
+    cursor: pointer;
+    @include font_prop($main-font, 10px, 600, #0b395400);
+
+    &:hover{
+
+    }
+
+    &:active{
+
+    }
+}
+
+.hero{
+    min-height: 365px;
+    @include display_prop(flex, flex-start, flex-start);
+    flex-direction: column;
+    margin: 10px 20px;
+    padding: 20px 20px;
+    background-image: url(/Furniture_website/assets/hero/hero.svg);
+    background-size: cover;
+    border-radius: 7%;
+    gap: 15px;
+
+    >h3{
+        @include font_prop($main-font, 12px, 600, $main-bg);
+    }
+
+    >h1{
+        @include font_prop($main-font, 35px, 700, $main-bg);
+    }
+
+    .hero_btn{
+        margin-left: -10px;
+    }
+}

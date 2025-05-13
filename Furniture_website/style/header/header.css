@@ -13,7 +13,7 @@ body {
 
 header {
   background: #fff;
-  border-bottom: 1px solid #5C676D;
+  box-shadow: -16px -17px 17px 3px;
   padding: 10px 0;
   position: relative;
   z-index: 100;
@@ -45,10 +45,15 @@ header .logo-items .logo-wrapper {
   align-items: center;
   position: relative;
 }
-header .logo-items .logo-wrapper img {
-  height: 20px;
-  margin: 0 2px;
-  position: static;
+header .logo-items .logo-wrapper > :nth-child(1) {
+  position: absolute;
+  right: 14px;
+  top: -4px;
+}
+header .logo-items .logo-wrapper > :nth-child(3) {
+  position: absolute;
+  right: -16px;
+  top: -4px;
 }
 header .logo-items > span {
   font-family: "Roboto Mono", monospace;

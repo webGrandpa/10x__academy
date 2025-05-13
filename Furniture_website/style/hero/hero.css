@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Noto+Serif+Georgian:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..900;1,100..900&family=Shadows+Into+Light&family=Tiny5&display=swap");
+.btn-style {
+  padding: 10px 20px;
+  border-radius: 45px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(11, 57, 84, 0);
+}
+.hero {
+  min-height: 365px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px 20px;
+  padding: 20px 20px;
+  background-image: url(/Furniture_website/assets/hero/hero.svg);
+  background-size: cover;
+  border-radius: 7%;
+  gap: 15px;
+}
+.hero > h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+.hero > h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+}
+.hero .hero_btn {
+  margin-left: -10px;
+}/*# sourceMappingURL=hero.css.map */

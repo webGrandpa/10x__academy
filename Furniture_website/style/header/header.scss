@@ -37,7 +37,7 @@ body{
 
 header{
     background: $main-bg;
-    border-bottom: 1px solid $grey-font;
+    box-shadow: -16px -17px 17px 3px;
     padding: 10px 0;
     position: relative;
     z-index: 100;
@@ -64,10 +64,21 @@ header{
         .logo-wrapper {
             @include display_prop(flex, center, center);
             position: relative;
+
              img {
-                 height: 20px;
-                 margin: 0 2px;
-                 position: static;
+                 
+             }
+
+             >:nth-child(1){
+                position: absolute;
+                right: 14px;
+                top: -4px;
+             }
+
+             >:nth-child(3){
+                position: absolute;
+                right: -16px;
+                top: -4px;
              }
         }
 
