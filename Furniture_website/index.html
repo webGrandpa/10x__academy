@@ -4,37 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEFURNITURE</title>
-    <link rel="stylesheet" href="./style/main/main.css">
-    <script src="./script/main.js" defer></script>
-</head>
+    <link rel="stylesheet" href="./style/header/header.css">
+    </head>
 <body>
     <header>
-        <nav>
-            <a href="">
-                <div class="logo-wrapper">
-                    <img src="./assets/main/logo_dot.svg" alt="">
-                    <img src="./assets/main/logo_sofa.svg" alt="">
-                    <img src="./assets/main/logo_dot.svg" alt="">
+        <div class="header-container">
+            <div class="header-content">
+                <a class="logo-items" href="#">
+                    <div class="logo-wrapper">
+                        <img src="./assets/header/logo_dot.svg" alt="Logo Dot">
+                        <img src="./assets/header/logo_sofa.svg" alt="Logo Sofa">
+                        <img src="./assets/header/logo_dot.svg" alt="Logo Dot">
+                    </div>
+                    <span>FURNITURE</span>
+                </a>
+                <nav class="main-nav">
+                    <button class="hamburger-menu" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li><a href="#">
+                            <img src="./assets/header/armChair_icon.svg" alt="Armchair Icon">
+                            CHAIRS</a></li>
+                        <li><a href="#">
+                            <img src="./assets/header/bed_icon.svg" alt="Bed Icon">
+                            BEDS</a></li>
+                        <li><a href="#">
+                            <img src="./assets/header/tables_icon.svg" alt="Tables Icon">
+                            TABLES</a></li>
+                        <li><a href="#">
+                            <img src="./assets/header/desk_icon.svg" alt="Desk Icon">
+                            DESKS</a></li>
+                        <li><a href="#">
+                            <img src="./assets/header/cabinets_icon.svg" alt="Cabinets Icon">
+                            CABINERS</a></li>
+                        <li><a href="#">
+                            <img src="./assets/header/ligtings_icon.svg" alt="Lighting Icon">
+                            LIGTING</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <div class="desktop-search">
+                        <input type="text" placeholder="What are you looking for?">
+                        <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
+                    </div>
+                    <div class="mobile-search">
+                        <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
+                    </div>
+                    <div class="user-cart-icons">
+                        <a href="#"><img src="./assets/header/cart_icon.svg" alt="Cart Icon"></a>
+                        <span>$0.0</span>
+                        <a href="#"><img src="./assets/header/favorite_icon.svg" alt="Favorite Icon"></a>
+                        <a href="#"><img src="./assets/header/user_icon.svg" alt="User Icon"></a>
+                    </div>
                 </div>
-                <span>FURNITURE</span>
-            </a>
-            <ul>
-                <li><a href="#">CHAIRS</a></li>
-                <li><a href="#">BEDS</a></li>
-                <li><a href="#">TABLES</a></li>
-                <li><a href="#">DESKS</a></li>
-                <li><a href="#">CABINERS</a></li>
-                <li><a href="#">LIGTING</a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu">
-            <span class="burger-slice"></span>
-            <span class="burger-slice"></span>
-            <span class="burger-slice"></span>
-        </div>
-        <div class="searchBar">
-
+            </div>
+            <div class="mobile-nav">
+                <nav class="mobile-nav_menu">
+                    <ul>
+                        <li><a href="#">CHAIRS</a></li>
+                        <li><a href="#">BEDS</a></li>
+                        <li><a href="#">TABLES</a></li>
+                        <li><a href="#">DESKS</a></li>
+                        <li><a href="#">CABINERS</a></li>
+                        <li><a href="#">LIGTING</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+
+    <main style="height: 100vh; background-color: #f0f0f0; padding: 20px;"></main>
+
+    <script src="./script/header.js" defer></script>
 </body>
 </html>
