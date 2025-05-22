@@ -1,0 +1,197 @@
+@import '../../mixins_variables/mixins';
+
+@media (min-width: $breakpoint-tablet) {
+    header{
+        .header-container{
+            @include display_prop(flex, center, center);
+            flex-direction: column;
+            padding: 0 35px;
+
+            .upper-content{
+                @include display_prop(flex, space-between, center);
+                width: 100%;
+                padding: 20px 0 10px 0;
+            }
+        }
+
+        .header-content{
+            @include display_prop(flex, space-between, center);
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .logo-items { 
+            min-width: auto;
+            min-height: 70px; 
+        }
+
+        .main-nav {
+            @include display_prop(flex, flex-start, center);
+            margin: 0;
+            width: 100%;
+
+            .hamburger-menu { 
+                display: none; 
+            }
+
+            ul {
+                display: flex;
+                @include display_prop(flex, space-evenly, center);
+                gap: 20px;
+                width: 100%;
+
+                 li {
+                    margin-bottom: 0;
+                    padding: 0 0 25px 0;
+
+                     a {
+                        @include display_prop(flex, center, center);
+                        flex-direction: column; 
+                        gap: 5px;
+                        @include font_prop($main-font, 14px, 500, $darker-blue);
+
+                        &:hover{ 
+                            color: $primary-orange; 
+                        }
+                     }
+                 }
+                 >:nth-child(7){
+                    padding: 20px 60px; 
+                    background-color: $primary-orange;
+                    border-radius: 20px 20px 0 0;
+
+                    a{ 
+                        color: $main-bg; 
+                    }
+
+                    &:hover{ 
+                        background: $dark-blue; 
+
+                        a { 
+                            color: #F5F5F5; 
+                        } 
+                    }
+                 }
+            }
+        }
+
+        .desktop-search {
+            @include display_prop(flex, center, center); 
+            border-radius: 8px;
+            padding: 7px 40px; 
+            background-color: #F5F5F5; 
+            gap: 10px;
+
+             input[type="text"] {
+                 border: none; 
+                 outline: none; 
+                 padding: 0 10px;
+                 @include font_prop($main-font, 14px, 400, $dark-blue); 
+                 background-color: #F5F5F5;
+
+                }
+             a img { 
+                height: 15px; 
+            }
+        }
+
+        .header-icons {
+            @include display_prop(flex, flex-end, center); 
+            gap: 100px;
+
+            .mobile-search { 
+                display: none; 
+            }
+
+            .user-cart-icons {
+                @include display_prop(flex, center, center); 
+                gap: 15px; 
+                display: flex;
+
+                a img { 
+                    height: 20px; 
+                }
+
+                span { 
+                    @include font_prop($main-font, 14px, 500, $darker-blue); 
+                }
+            }
+        }
+
+        .mobile-nav {
+            display: none; 
+        }
+
+        .with-dropdown {
+            position: relative;
+
+            .dropdown-menu {
+                display: flex; 
+                pointer-events: none; 
+                opacity: 0; 
+                visibility: hidden;
+                transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                position: absolute; 
+                top: 100%; 
+                left: 0; 
+                background: $main-bg;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+                z-index: 1002;
+                padding: 20px; 
+                min-width: 550px; 
+                border-radius: 0 0 8px 8px; 
+                gap: 30px;
+                @include display_prop(flex, flex-start, flex-start); 
+                flex-direction: row;
+                // margin-top: 50px;
+
+                > ul {
+                    padding: 0; 
+                    margin: 0; 
+                    max-width: 30%; 
+                    display: flex;
+                    flex-direction: column; 
+                    align-items: flex-start;
+
+                    > li {
+                        cursor: pointer; 
+                        padding: 8px 0; 
+                        white-space: nowrap;
+                        border-bottom: 1px solid #eee;
+                        width: 100%;
+                        @include font_prop($main-font, 12px, 400, $darker-blue);
+
+                        &:hover { 
+                            color: $primary-orange; 
+                        }
+                    }
+                    > li:last-child { 
+                        border-bottom: none; 
+                    }
+                }
+                .recomended_items {
+                    flex-direction: column; 
+                    padding:0 0 0 20px;
+                    border-left: 1px solid #eee; 
+                    justify-content: center; 
+                    gap: 10px;
+                    flex-shrink: 0;
+                    img {
+                        position: absolute;
+                        width: 150px; 
+                        height: auto;
+                        align-self: center; 
+                        margin-top: 10px;
+                        left: 480px;
+                        top: 100px;
+                    }
+                }
+            }
+            &:hover .dropdown-menu {
+                 opacity: 1; 
+                 visibility: visible; 
+                 pointer-events: auto; 
+                }
+         }
+    }
+}

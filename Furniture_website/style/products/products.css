@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Tiny5&display=swap");
+.product-wrapper {
+  width: 100%;
+  height: auto;
+  background: #F9F9F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.product-wrapper .product-wrapper_header {
+  width: 90%;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px 0;
+}
+.product-wrapper .product-wrapper_header .company-searchings > h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2A2B39;
+}
+.product-wrapper .product-wrapper_header .company-searchings > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #FFB128;
+  padding: 30px 0 20px 0;
+}
+.product-wrapper .product-wrapper_header .company-searchings > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2A2B39;
+}
+.product-wrapper .product-wrapper_header .company-age {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
+}
+.product-wrapper .product-wrapper_header .company-age .decor-element {
+  width: 20px;
+  height: 6px;
+  background: #FFB128;
+  border-radius: 10px;
+}
+.product-wrapper .product-wrapper_header .company-age .company-age_nums > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2A2B39;
+}
+.product-wrapper .product-wrapper_header .company-age .company-age_nums > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #5C676D;
+}
+.product-wrapper .product-wrapper_items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 40px;
+  background: #F9F9F9;
+  width: 90%;
+}
+.product-wrapper .product-wrapper_items > a {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 16px;
+}
+.product-wrapper .product-wrapper_items > a:hover {
+  background: #fff;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px #fff;
+  transition: 0.3s ease-in-out;
+}
+.product-wrapper .product-wrapper_items > a:hover img {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+.product-wrapper .product-wrapper_items > a img {
+  width: 60%;
+}
+.product-wrapper .product-wrapper_items > a > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2A2B39;
+}
+.product-wrapper .product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 50px;
+}
+.product-wrapper .product-list figure {
+  width: 33.33%;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product-wrapper .product-list figure > img {
+  width: 100%;
+}
+.product-wrapper .product-list figure figcaption {
+  margin-top: -250px;
+  padding: 40px;
+}
+.product-wrapper .product-list figure figcaption span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(clamp(20px, 1.3rem, 2rem) / 2, clamp(20px, 1.3rem, 2rem), clamp(20px, 1.3rem, 2rem) * 2);
+  font-weight: 600;
+  color: #fff;
+  padding: 30px 0;
+}
+.product-wrapper .product-list figure figcaption h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.product-wrapper .product-list figure:hover {
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px #fff;
+  transform: scale(1.01);
+  transition: 0.5s ease-in-out;
+}
+.product-wrapper .product-list figure:hover figcaption {
+  transform: translateY(-15px);
+  transition: 0.3s ease-in-out;
+}
+.product-wrapper .trends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-wrapper .trends > img {
+  padding: 100px 40px 0 0;
+}
+.product-wrapper .trends > figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.product-wrapper .trends > figcaption > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(clamp(20px, 1.3rem, 2rem) / 2, clamp(20px, 1.3rem, 2rem), clamp(20px, 1.3rem, 2rem) * 2);
+  font-weight: 600;
+  color: #2A2B39;
+}
+.product-wrapper .trends > figcaption > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2A2B39;
+}
+.product-wrapper .trends > figcaption > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(clamp(14px, 1rem, 2rem) / 2, clamp(14px, 1rem, 2rem), clamp(14px, 1rem, 2rem) * 2);
+  font-weight: 700;
+  color: #5C676D;
+}
+.product-wrapper .trends > figcaption > button {
+  background: #FFB128;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 45px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.product-wrapper .trends > figcaption > button:hover {
+  background: #0B3954;
+  color: #fff;
+  transform: scale(1.02);
+}
+.product-wrapper .trends > figcaption > button:active {
+  transform: scale(0.98);
+}
+.product-wrapper .trends > figcaption > button::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #0B3954;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: transform 300ms ease-in-out;
+  z-index: 0;
+}
+.product-wrapper .trends > figcaption > button:hover::after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+.product-wrapper .trends > figcaption > button span {
+  position: relative;
+  z-index: 1;
+}
+.product-wrapper .furniture-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px clamp(350px, 5%, 33px);
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2A2B39;
+  line-height: 1.6;
+}
+.product-wrapper .furniture-showcase .furniture-grid {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item:hover {
+  transform: translateY(-5px);
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item .image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 20px;
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item .discount {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #FFB128;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+}
+.product-wrapper .furniture-showcase .furniture-grid .furniture-item .item-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2A2B39;
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+.product-wrapper .furniture-showcase .shop-button {
+  letter-spacing: 1px;
+  margin-top: 30px;
+  background: #FFB128;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 45px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.product-wrapper .furniture-showcase .shop-button:hover {
+  background: #fff;
+  color: #FFB128;
+  transform: scale(1.02);
+}
+.product-wrapper .furniture-showcase .shop-button:active {
+  transform: scale(0.98);
+}
+.product-wrapper .furniture-showcase .shop-button::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #fff;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: transform 300ms ease-in-out;
+  z-index: 0;
+}
+.product-wrapper .furniture-showcase .shop-button:hover::after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+.product-wrapper .furniture-showcase .shop-button span {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .furniture-grid {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=products.css.map */

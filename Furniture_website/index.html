@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEFURNITURE</title>
     <link rel="stylesheet" href="./style/header/header.css">
+    <link rel="stylesheet" href="./style/header/mediaQ/media.css">
     <link rel="stylesheet" href="./style/hero/hero.css">
+    <link rel="stylesheet" href="./style/hero/media/hero_media.css">
+    <link rel="stylesheet" href="./style/products/products.css">
 
     <script src="./script/header.js" defer></script>
     <script src="./script/hero.js" defer></script>
@@ -13,7 +16,7 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="header-content">
+            <section class="upper-content">
                 <a class="logo-items" href="#">
                     <div class="logo-wrapper">
                         <img src="./assets/header/logo_dot.svg" alt="Logo Dot">
@@ -22,12 +25,166 @@
                     </div>
                     <span>FURNITURE</span>
                 </a>
+                <div class="desktop-search">
+                    <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
+                    <input type="text" placeholder="What are you looking for?">
+                </div>
+                <div class="header-icons">
+                    
+                    <div class="mobile-search">
+                        <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
+                    </div>
+                    <div class="user-cart-icons">
+                        <a href="#"><img src="./assets/header/cart_icon.svg" alt="Cart Icon"></a>
+                        <span>$0.0</span>
+                        <a href="#"><img src="./assets/header/favorite_icon.svg" alt="Favorite Icon"></a>
+                        <a href="#"><img src="./assets/header/user_icon.svg" alt="User Icon"></a>
+                    </div>
+                </div>
+            </section>
+            <div class="header-content">
+
                 <nav class="main-nav">
                     <button class="hamburger-menu" aria-label="Toggle Menu">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
+                    <ul>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/armChair_icon.svg" alt="Armchair Icon">
+                            <span>CHAIRS <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>ARMCHAIRS</li>
+                                    <li>BAR STOOLS</li>
+                                    <li>CHAIR PADS</li>
+                                    <li>CHAISE LOUNGES</li>
+                                    <li>DESK CHAIRS</li>
+                                    <li>DINING CHAIRS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/dropdown_1.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/bed_icon.svg" alt="Bed Icon">
+                            <span>BEDS <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>HEADBOARDS</li>
+                                    <li>KIDS BEDS</li>
+                                    <li>METAL BEDS</li>
+                                    <li>SLIPPER SOFAS</li>
+                                    <li>STORAGE BEDS</li>
+                                    <li>UPHOLSTERED BEDS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/dropdown_2.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/tables_icon.svg" alt="Tables Icon">
+                            <span>TABLES <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>ARMCHAIRS</li>
+                                    <li>BAR STOOLS</li>
+                                    <li>CHAIR PADS</li>
+                                    <li>CHAISE LOUNGES</li>
+                                    <li>DESK CHAIRS</li>
+                                    <li>DINING CHAIRS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/dropdown_3.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/desk_icon.svg" alt="Desk Icon">
+                            <span>DESKS <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>ARMCHAIRS</li>
+                                    <li>BAR STOOLS</li>
+                                    <li>CHAIR PADS</li>
+                                    <li>CHAISE LOUNGES</li>
+                                    <li>DESK CHAIRS</li>
+                                    <li>DINING CHAIRS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/dropdown_4.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/cabinets_icon.svg" alt="Cabinets Icon">
+                            <span>CABINETS <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>ARMCHAIRS</li>
+                                    <li>BAR STOOLS</li>
+                                    <li>CHAIR PADS</li>
+                                    <li>CHAISE LOUNGES</li>
+                                    <li>DESK CHAIRS</li>
+                                    <li>DINING CHAIRS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/dropdown_5.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="with-dropdown"><a href="#">
+                            <img src="./assets/header/ligtings_icon.svg" alt="Lighting Icon">
+                            <span>LIGHTING <img src="./assets/header/header_arrow.svg" alt=""></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>ARMCHAIRS</li>
+                                    <li>BAR STOOLS</li>
+                                    <li>CHAIR PADS</li>
+                                    <li>CHAISE LOUNGES</li>
+                                    <li>DESK CHAIRS</li>
+                                    <li>DINING CHAIRS</li>
+                                </ul>
+                                <div class="recomended_items">
+                                    <h5>WE RECOMENDED</h5>
+                                    <h3>FANCY CHAIR</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>1550.00$</span>
+                                    <img src="./assets/header/drowpdown/drop-down_6.svg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#">
+                            <img src="./assets/header/star_icon.svg" alt="star Icon">
+                            SALES</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-nav">
+                <nav class="mobile-nav_menu">
                     <ul>
                         <li><a href="#">
                             <img src="./assets/header/armChair_icon.svg" alt="Armchair Icon">
@@ -49,52 +206,147 @@
                             LIGTING</a></li>
                     </ul>
                 </nav>
-                <div class="header-icons">
-                    <div class="desktop-search">
-                        <input type="text" placeholder="What are you looking for?">
-                        <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
-                    </div>
-                    <div class="mobile-search">
-                        <a href="#"><img src="./assets/header/search_icon.svg" alt="Search Icon"></a>
-                    </div>
-                    <div class="user-cart-icons">
-                        <a href="#"><img src="./assets/header/cart_icon.svg" alt="Cart Icon"></a>
-                        <span>$0.0</span>
-                        <a href="#"><img src="./assets/header/favorite_icon.svg" alt="Favorite Icon"></a>
-                        <a href="#"><img src="./assets/header/user_icon.svg" alt="User Icon"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-nav">
-                <nav class="mobile-nav_menu">
-                    <ul>
-                        <li><a href="#">CHAIRS</a></li>
-                        <li><a href="#">BEDS</a></li>
-                        <li><a href="#">TABLES</a></li>
-                        <li><a href="#">DESKS</a></li>
-                        <li><a href="#">CABINERS</a></li>
-                        <li><a href="#">LIGTING</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h3>BEFURNITURE</h3>
-            <h1>LUXURY<br>FURNITURE</h1>
-            <div class="hero_btn">
-                <button class="btn-style"><span>GO TO SHOP</span></button>
-                <button class="btn-style">SEE COLLECTION</button>
-            </div>
-            <div class="change_cta">
-                <button class="plus_char">+</button>
-                <button class="plus_char">+</button>
-                <button class="plus_char">+</button>
+            <div class="hero-img_bg">
+                <!-- <div class="hero_image"></div> -->
+                <!-- <img src="./assets/hero/big_screen_hero.svg" alt=""> -->
+                <!-- <div class="hero_items"> -->
+                    <h5>BEFURNITURE</h5>
+                    <h1>LUXURY <br> FURNITURE</h1>
+                    <div class="hero_buttons">
+                        <button><span>GO TO SHOP</span></button>
+                        <button><span>SEE COLLECTION</span></button>
+                    </div>
+                <!-- </div> -->
             </div>
         </section>
+        <section class="product-wrapper">
+            <section class="product-wrapper_header">
+                <div class="company-searchings">
+                    <h4>SEARCH FOR</h4>
+                    <span>24000</span>
+                    <h2>PRODUCTS</h2>
+                </div>
+                <div class="company-age">
+                    <div class="decor-element"></div>
+                    <div class="company-age_nums">
+                        <span>24000</span>
+                        <p>products</p>
+                    </div>
+                    <div class="decor-element"></div>
+                    <div class="company-age_nums">
+                        <span>12</span>
+                        <p>years</p>
+                    </div>
+                </div>
+            </section>
+            <article class="product-wrapper_items">
+                <a href="#"><img src="./assets/products/furniturestore-category1.svg" alt="">
+                    <span>Chairs</span>
+                </a>
+                <a href="#"><img src="./assets/products/furniturestore-category2.svg" alt="">
+                    <span>Beds</span>
+                </a>
+                <a href="#"><img src="./assets/products/furniturestore-category3.svg" alt="">
+                    <span>Tales</span>
+                </a>
+                <a href="#"><img src="./assets/products/furniturestore-category4.svg" alt="">
+                    <span>Desks</span>
+                </a>
+                <a href="#"><img src="./assets/products/furniturestore-category5.svg" alt="">
+                    <span>Cabinets</span>
+                </a>
+                <a href="#"><img src="./assets/products/furniturestore-category6.svg" alt="">
+                    <span>Lighting</span>
+                </a>
+
+            </article>
+            <section class="product-list">
+                <figure>
+                    <img src="./assets/products/product_list/furniturestore-home-pic1.webp" alt="">
+                    <figcaption>
+                        <span>Time to</span>
+                        <h3>BEDROOM</h3>
+                        <div></div>
+                </figcaption></figure>
+                <figure>
+                    <img src="./assets/products/product_list/furniturestore-home-pic2.webp" alt="">
+                    <figcaption>
+                        <span>Time to</span>
+                        <h3>OFFICE</h3>
+                        <div></div>
+                </figcaption></figure>
+                <figure>
+                    <img src="./assets/products/product_list/furniturestore-home-pic3.webp" alt="">
+                    <figcaption>
+                        <span>Time to</span>
+                        <h3>KITCHEN</h3>
+                        <div></div>
+                </figcaption></figure>
+            </section>
+            <figure class="trends">
+                <img src="./assets/products/furniturestore-home-pic4.svg" alt="">
+                <figcaption>
+                    <span>SEARCH FOR</span>
+                    <h2>GET READY<br>FOR A SPRING</h2>
+                    <p>Metus ultricies curabitur sodales ipsum elit cubilia.</p>
+                    <button><span>ACTUAL TRENDS</span></button>
+                </figcaption>
+            </figure>
+            <section class="furniture-showcase">
+                <section class="furniture-grid">
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_1.svg" alt="Batchata lamp">
+                            <span class="discount">-17%</span>
+                        </div>
+                        <p class="item-name">Batchata lamp</p>
+                    </div>
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_2.svg" alt="Circle corners table">
+                        </div>
+                        <p class="item-name">Circle corners table</p>
+                    </div>
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_3.svg" alt="Circle lamp">
+                            <span class="discount">-18%</span>
+                        </div>
+                        <p class="item-name">Circle lamp</p>
+                    </div>
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_4.svg" alt="Cozy armchair">
+                        </div>
+                        <p class="item-name">Cozy armchair</p>
+                    </div>
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_5.svg" alt="Dining table">
+                            <span class="discount">-9%</span>
+                        </div>
+                        <p class="item-name">Dining table</p>
+                    </div>
+                    <div class="furniture-item">
+                        <div class="image-wrapper">
+                            <img src="./assets/products/grid/grid_6.svg" alt="Fancy armchair">
+                        </div>
+                        <p class="item-name">Fancy armchair</p>
+                    </div>
+                </section>
+                <button class="shop-button"><span>GO TO SHOP</span></button>
+            </section>
+        </section>
     </main>
+    <aside>
+        
+    </aside>
 
 
 </body>

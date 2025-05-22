@@ -1,0 +1,82 @@
+$main-font: "Montserrat", sans-serif;
+$main-bg: #fff;
+$primary-orange: #FFB128;
+$dark-blue: #0B3954;
+$darker-blue: #2A2B39;
+$grey-font: #5C676D;
+$light-blue: #1971a3;
+//responsive
+$mobile-menu-width: 250px;
+$breakpoint-tablet: 768px;
+
+@mixin display_prop($flex, $content, $align){
+    display: $flex;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin font_prop($family, $size, $weight, $color){
+    font-family: $family;
+    font-size: clamp($size/2, $size, $size*2);
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin button_prop(
+    $bg,
+    $color,
+    $hover-bg: null,
+    $hover-color: null,
+    $hover-scale: 1.01,
+    $active-scale: 0.99,
+    $has-overlay: false,
+    $overlay-bg: null
+) {
+    background: $bg;
+    color: $color;
+    padding: 15px 30px;
+    border-radius: 45px;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background: if($hover-bg, $hover-bg, lighten($bg, 10%));
+        color: if($hover-color, $hover-color, darken($color, 10%));
+        transform: scale($hover-scale);
+    }
+
+    &:active {
+        transform: scale($active-scale);
+    }
+
+    @if $has-overlay {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 115%;
+            height: 200px;
+            background: if($overlay-bg, $overlay-bg, if($hover-bg, $hover-bg, lighten($bg, 15%)));
+
+            transform: translateY(-45%) skew(25deg) scale(0);
+            left: -5%;
+            transition: transform 300ms ease-in-out;
+            z-index: 0;
+        }
+
+        &:hover::after {
+            transform: translateY(-45%) skew(25deg) scale(1);
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+$gen-padding: clamp(350px, 5%, 33px);
+// $button-padding: 15px 30px;
+$item-padding: 20px;
