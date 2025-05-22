@@ -26,7 +26,7 @@
 
     <script>
 
-        let score = JSON.parse(localStorage.getItem('score'))
+        const score = JSON.parse(localStorage.getItem('score'))
         || {wins: 0,
             loses: 0,
             ties: 0
@@ -41,38 +41,44 @@
         if (playerMove === 'scissors') {
           if (computerMove === 'rock') {
             result = 'You lose.';
+            score.losses++
           } else if (computerMove === 'paper') {
             result = 'You win.';
+            score.wins++
           } else if (computerMove === 'scissors') {
             result = 'Tie.';
+            score.ties++
           }
 
         } else if (playerMove === 'paper') {
           if (computerMove === 'rock') {
             result = 'You win.';
+            score.wins++;
           } else if (computerMove === 'paper') {
             result = 'Tie.';
+            score.ties++
           } else if (computerMove === 'scissors') {
             result = 'You lose.';
+            score.losses++
           }
           
         } else if (playerMove === 'rock') {
           if (computerMove === 'rock') {
             result = 'Tie.';
+            score.ties++
           } else if (computerMove === 'paper') {
             result = 'You lose.';
+            score.losses++
           } else if (computerMove === 'scissors') {
             result = 'You win.';
+            score.wins++
           }
         }
 
 
         if (result === 'You win.'){
-            score.wins ++;
         } else if (result === 'You lose.'){
-            score.losses ++;
         } else if (result === 'Tie.'){
-            score.ties++;
         }
 
 
