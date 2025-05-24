@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Tiny5&display=swap");
+aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
+aside .aside-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 65%;
+  height: auto;
+  background: #FFB128;
+  border-radius: 35px;
+}
+aside .aside-content figure {
+  width: 85%;
+  margin-top: -30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+aside .aside-content figure figcaption > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  padding: 20px 0;
+}
+aside .aside-content figure figcaption h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 30px;
+}
+aside .aside-content figure figcaption > button {
+  background: #0B3954;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 45px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+aside .aside-content figure figcaption > button:hover {
+  background: #fff;
+  color: #0B3954;
+  transform: scale(1.02);
+}
+aside .aside-content figure figcaption > button:active {
+  transform: scale(0.98);
+}
+aside .aside-content figure figcaption > button::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #fff;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: transform 300ms ease-in-out;
+  z-index: 0;
+}
+aside .aside-content figure figcaption > button:hover::after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+aside .aside-content figure figcaption > button span {
+  position: relative;
+  z-index: 1;
+}
+aside .aside-content .aside-footer {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+aside .aside-content .aside-footer .aside-footer_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+aside .aside-content .aside-footer .aside-footer_item > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  padding: 20px;
+}
+aside .aside-content .aside-footer .aside-footer_item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px 0;
+}
+aside .aside-content .aside-footer .aside-footer_item > div > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 20px;
+}
+aside .aside-content .aside-footer .aside-footer_item > div > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}/*# sourceMappingURL=aside.css.map */
