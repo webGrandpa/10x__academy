@@ -4,6 +4,7 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-bottom: 70px;
 }
 aside .aside-content {
@@ -118,4 +119,158 @@ aside .aside-content .aside-footer .aside-footer_item > div > span {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
+}
+aside .aside-partners {
+  width: 100%;
+  height: auto;
+  background: #0B3954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  flex-direction: column;
+}
+aside .aside-partners figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 70%;
+}
+aside .aside-partners figure .partners-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  width: 40%;
+  padding: 20px;
+}
+aside .aside-partners figure .partners-description > p {
+  padding: 20px;
+  width: 110%;
+}
+aside .aside-partners figure .partners-description .description-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+aside .aside-partners figure .partners-description .description-btn > a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFB128;
+}
+aside .aside-partners figure .partners-description .description-btn > button {
+  background: #FFB128;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 45px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+aside .aside-partners figure .partners-description .description-btn > button:hover {
+  background: #fff;
+  color: #0B3954;
+  transform: scale(1.02);
+}
+aside .aside-partners figure .partners-description .description-btn > button:active {
+  transform: scale(0.98);
+}
+aside .aside-partners figure .partners-description .description-btn > button::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #fff;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: transform 300ms ease-in-out;
+  z-index: 0;
+}
+aside .aside-partners figure .partners-description .description-btn > button:hover::after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+aside .aside-partners figure .partners-description .description-btn > button span {
+  position: relative;
+  z-index: 1;
+}
+aside .aside-partners figure .avatar-wrapper :nth-child(1) {
+  position: relative;
+  left: 70px;
+  width: 150px;
+}
+aside .aside-partners figure .avatar-wrapper :nth-child(2) {
+  width: 300px;
+  margin-top: -100px;
+}
+aside .aside-partners .captions-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+aside .aside-partners .captions-wrapper > span {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+aside .aside-partners .captions-wrapper > span > :nth-child(1) {
+  background: #FFB128;
+  width: 20px;
+  height: 3px;
+  border-radius: 40px;
+}
+aside .aside-partners .captions-wrapper > span > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+aside .aside-partners .captions-wrapper > span > :nth-child(2) > :nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+aside .aside-partners .captions-wrapper > span > :nth-child(2) > :nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+aside .partners-slider {
+  width: 87%;
+}
+aside .partners-slider .logos {
+  padding: 60px 0;
+  overflow: hidden;
+}
+aside .partners-slider .logos .logos-slide {
+  display: flex;
+}
+aside .partners-slider .logos .logos-slide > img {
+  height: 60px;
+  margin: 0 40px;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=aside.css.map */
