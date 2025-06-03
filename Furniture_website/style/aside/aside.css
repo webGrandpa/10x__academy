@@ -12,7 +12,7 @@ aside .aside-content {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 65%;
+  width: 75%;
   height: auto;
   background: #FFB128;
   border-radius: 35px;
@@ -135,7 +135,7 @@ aside .aside-partners figure {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  width: 70%;
+  width: 80%;
 }
 aside .aside-partners figure .partners-description {
   font-family: "Montserrat", sans-serif;
@@ -178,8 +178,8 @@ aside .aside-partners figure .partners-description .description-btn > button {
   color: #fff;
 }
 aside .aside-partners figure .partners-description .description-btn > button:hover {
-  background: #fff;
-  color: #0B3954;
+  background: #1971a3;
+  color: #fff;
   transform: scale(1.02);
 }
 aside .aside-partners figure .partners-description .description-btn > button:active {
@@ -190,7 +190,7 @@ aside .aside-partners figure .partners-description .description-btn > button::af
   position: absolute;
   width: 115%;
   height: 200px;
-  background: #fff;
+  background: #1971a3;
   transform: translateY(-45%) skew(25deg) scale(0);
   left: -5%;
   transition: transform 300ms ease-in-out;
@@ -273,4 +273,96 @@ aside .partners-slider .logos .logos-slide > img {
   to {
     transform: translateX(-50%);
   }
+}
+.aside_bottom {
+  width: 80%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.aside_bottom > :nth-child(1) {
+  width: 40%;
+  height: 100%;
+  background: #FFB128;
+  padding: 60px 50px;
+}
+.aside_bottom > :nth-child(1) > p > :nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.aside_bottom > :nth-child(1) > p > :nth-child(2) {
+  color: #2A2B39;
+}
+.aside_bottom > :nth-child(2) {
+  width: 60%;
+  height: 100%;
+  gap: 20px;
+  background: #0B3954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.aside_bottom > :nth-child(2) input {
+  flex-shrink: 0;
+  width: 70%;
+  background: #174B69;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 48px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+.aside_bottom > :nth-child(2) input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.aside_bottom > :nth-child(2) input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.aside_bottom > :nth-child(2) > button {
+  background: #FFB128;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 45px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.aside_bottom > :nth-child(2) > button:hover {
+  background: #1971a3;
+  color: #fff;
+  transform: scale(1.02);
+}
+.aside_bottom > :nth-child(2) > button:active {
+  transform: scale(0.98);
+}
+.aside_bottom > :nth-child(2) > button::after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #1971a3;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: transform 300ms ease-in-out;
+  z-index: 0;
+}
+.aside_bottom > :nth-child(2) > button:hover::after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+.aside_bottom > :nth-child(2) > button span {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=aside.css.map */

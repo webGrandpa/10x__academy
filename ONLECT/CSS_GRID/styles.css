@@ -1,0 +1,82 @@
+/* Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* მთელი ეკრანის სიმაღლე */
+
+}
+
+/* Full-screen grid container */
+.grid-layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Grid areas */
+header {
+  grid-area: header;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #374151;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  grid-area: main;
+  background-color: #e5e7eb;
+  padding: 20px;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #9ca3af;
+  color: #111827;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "aside"
+      "main"
+      "footer";
+  }
+
+  nav, aside {
+    text-align: center;
+  }
+}

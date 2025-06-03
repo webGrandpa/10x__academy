@@ -11,7 +11,7 @@ aside{
     .aside-content{
         @include display_prop(flex, center, center);
         flex-direction: column;
-        width: 65%;
+        width: 75%;
         height: auto;
         background: $primary-orange;
         border-radius: 35px;
@@ -92,7 +92,7 @@ aside{
         figure{
             @include display_prop(flex, space-between, center);
             gap: 40px;
-            width: 70%;
+            width: 80%;
 
 
             .partners-description{
@@ -119,12 +119,12 @@ aside{
                         @include button_prop(
                             $bg: $primary-orange,
                             $color: $main-bg,
-                            $hover-bg: $main-bg,
-                            $hover-color: $dark-blue,
+                            $hover-bg: $light-blue,
+                            $hover-color: $main-bg,
                             $hover-scale: 1.02,
                             $active-scale: 0.98,
                             $has-overlay: true,
-                            $overlay-bg: $main-bg);
+                            $overlay-bg: $light-blue);
                         @include font_prop($main-font, 16px, 600, $main-bg);
                     }
                 }
@@ -210,5 +210,69 @@ aside{
     }
     to {
         transform: translateX(-50%);
+    }
+}
+
+.aside_bottom{
+    width: 80%;
+    height: 180px;
+    @include display_prop(flex, center, center);
+    border-radius: 24px;
+    overflow: hidden;
+
+    >:nth-child(1){
+        width: 40%;
+        height: 100%;
+        background: $primary-orange;
+        padding: 60px 50px;
+
+        >p{
+            >:nth-child(1){
+            @include font_prop($main-font, 20px, 600, $main-bg);
+
+        }
+
+            >:nth-child(2){
+                color: $darker-blue;
+            }
+        }
+    }
+
+    >:nth-child(2){
+        width: 60%;
+        height: 100%;
+        gap: 20px;
+        background: $dark-blue;
+        @include display_prop(flex, center, center);
+        padding: 50px;
+
+        input{
+            flex-shrink: 0;
+            width: 70%;
+            background: #174B69;
+            color: $main-bg;
+            border: none;
+            border-radius: 8px;
+            height: 48px;
+            padding: 0 15px;
+            font-size: 16px;
+            &::placeholder {
+                color: rgba($main-bg, 0.6);
+            }
+        }
+
+        > button {
+            @include button_prop(
+                $bg: $primary-orange,
+                $color: $main-bg,
+                $hover-bg: $light-blue,
+                $hover-color: $main-bg,
+                $hover-scale: 1.02,
+                $active-scale: 0.98,
+                $has-overlay: true,
+                $overlay-bg: $light-blue);
+            @include font_prop($main-font, 16px, 600, $main-bg);
+        }
+
     }
 }
