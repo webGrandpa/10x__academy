@@ -103,14 +103,51 @@
 
         console.log(basketball.price);
 
+        basketball.price += 500;
+
+        console.log(basketball.price);
+
+        basketball['deliveryy-time'] = '3 days';
+        console.log(basketball);
+
+        let basketball2 = {
+            price: 2095,
+            'delivery-time': '3 days',
+        }
+
+        const lessPrice = (product1, product2) => {
+            if (product1.price < product2.price) {
+                return `The cheaper product is ${product1.price} with delivery time ${product1['delivery-time']}`;
+            } else {
+                return `The cheaper product is ${product2.price} with delivery time ${product2['delivery-time']}`;
+            }
+        }
+
+        const cheaperProduct = lessPrice(basketball, basketball2);
+        console.log(cheaperProduct);
 
 
+        const isSameProduct = (product1, product2) => {
+            if( product1.price === product2.price && 
+                product1['delivery-time'] === product2['delivery-time']) {
+                return 'The products are the same';
+            } else {
+                return 'The products are different';
+            }
+        }
 
+        console.log(isSameProduct(basketball, basketball2));
 
+        const greeting = 'Good Morning';
 
+        
+        console.log(greeting.toLowerCase());
 
+        const test = 'test';
 
+        console.log(test.repeat(3));
 
+        
 
 
 
