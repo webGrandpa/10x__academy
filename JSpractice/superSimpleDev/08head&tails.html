@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and Tails</title>
+</head>
+<body>
+    <button
+    onclick="
+        headTailsGame('Head');
+    ">Head</button>
+    <button
+    onclick="
+        headTailsGame('Tails');
+    ">Tails</button>
+
+
+    <script>
+        const headTailsGame = (playerMove) => {
+            const computerMove = Math.random() < 0.5 ? 'Head' : 'Tails';
+            if(playerMove === 'Head'){
+                if(computerMove === 'Head'){
+                    alert('You win!');
+                } else {
+                    alert('You lose!');
+                }
+            } else if(playerMove === 'Tails'){
+                if(computerMove === 'Tails'){
+                    alert('You win!');
+                } else {
+                    alert('You lose!');
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
