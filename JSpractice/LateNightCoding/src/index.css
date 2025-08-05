@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+    --background-color: #0A0A0A;
+    --surface-color: #141414;
+    --primary-text-color: #E0E0E0;
+    --secondary-text-color: #A0A0A0;
+    --border-color: #2a2a2a;
+    --accent-color: #61DAFB; /* React Blue */
+    --accent-color-hover: #88E6FF;
+    --danger-color: #EF4444;
+    --danger-color-hover: #F87171;
+    --success-color: #32CD32;
+    --font-primary: 'Inter', sans-serif;
+    --font-code: 'Fira Code', monospace;
+}
+
+/* --- საბაზისო სტილები --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 5vh;
+}
+
+/* --- ანიმაციები --- */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50px);
+        margin-bottom: -81px; /* სიმაღლის კომპენსაცია padding-ის ჩათვლით */
+    }
+}

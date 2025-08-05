@@ -1,0 +1,45 @@
+/* --- ფორმის სტილები --- */
+.add-todo-form {
+    display: flex;
+    gap: 0.75rem;
+    animation: fadeInUp 0.5s 0.2s ease-out backwards;
+}
+
+.add-todo-form input {
+    flex-grow: 1;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.add-todo-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+}
+
+.add-todo-form button {
+    background-image: linear-gradient(to right, var(--accent-color) 0%, #38bdf8 100%);
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(97, 218, 251, 0.2);
+}
+
+.add-todo-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(97, 218, 251, 0.3);
+}
+
+.add-todo-form button:active {
+    transform: translateY(0);
+}

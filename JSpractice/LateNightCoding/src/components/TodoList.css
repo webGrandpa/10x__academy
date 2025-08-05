@@ -1,0 +1,8 @@
+/* --- დავალებების სიის სტილები --- */
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem; /* დაშორება ფორმასა და სიას შორის */
+}
